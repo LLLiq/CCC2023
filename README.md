@@ -10,18 +10,20 @@
 
  ## Problem
 
-- Basic  - 1024-Point FFT Single Kernel Programming
+- Basic  - Vision 3X3 filter2D on 64x64 image
 
-    The basic requirement is to complete a 1k-Point FFT design based on  personal understanding using AIE API or AIE Intrinsic. 
+    Create the filter2D function with 3x3 kernel on 64x64 image using AIE API or AIE Intrinsic based on personal understanding. 
 
     - AIE Emulation succeeded
     - The design report submitted
 
-- Advanced  - Explore very large point FFT (8k ~ 64k points) design on VCK5000 
+- Advanced  - Image Signal Processing Pipeline on HD image
+
+    Create high definition image processing pipeline design based on personal understanding. It is encouraged to fully use the Vitis Vision Library.
 
     - The system level emulation or the hardware run on VCK5000 succeeded
     - The design report submitted
-
+    - 
 ## Performance Analyzer
 
 
