@@ -1,0 +1,12 @@
+#pragma once
+
+#define WIDTH 1280
+#define HEIGHT 720
+#define PART_NUMBER 12
+#define PART_LINE_NUMBER HEIGHT/PART_NUMBER
+
+#define UNIT_BYTE 4
+#define IN_WINDOW_SIZE WIDTH*UNIT_BYTE*3
+#define OUT_WINDOW_SIZE WIDTH*UNIT_BYTE
+
+
