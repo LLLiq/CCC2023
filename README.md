@@ -1,4 +1,4 @@
-# CCFSys 2023 - Second Prize - ECNU 
+# CCFSys 2023 - First Prize - BJUT
 
 > University：北京工业大学 
 > 
