@@ -25,6 +25,13 @@
       
 ## Performance Analyzer
 
+在比赛期间完成了三种分辨率图像的filter2d。在初赛阶段完成了64x64分辨率以及1280x720分辨率的filter2d，决赛阶段优化了初赛代码以及实现了8K分辨率的filter2d设计。
+
+本项目整体完成情况如下。
+
+- 完成了8K分辨率int32类型的filter2d算法的AIE设计、优化和仿真；
+- 完成了AIE、PL、host三端配合，能够在VCK5000硬件上运行。
+- 实现了在int32类型的8K分辨率下平均101.97FPS的运行速度。
 
 ## Design Report
 
