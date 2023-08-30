@@ -37,7 +37,7 @@ The overall completion of the project is as follows.
 
 - Design report：[Design report](https://github.com/LLLiq/ccc2023_liq/blob/finals/%E5%8C%97%E4%BA%AC%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E6%9E%81%E5%85%89%E9%98%9F%E6%8A%80%E6%9C%AF%E6%8A%A5%E5%91%8A_%E5%86%B3%E8%B5%9B.pdf)
 
-## Excution
+## Execution
 
 1. AIE simulation
 
