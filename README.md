@@ -77,7 +77,6 @@ CCC2023
 │   │   ├── hw_link
 │   │   ├── pl
 │   │   └── Makefile
-│   │
 │   └── filter2d_64x64_basic         64x64 filter2d source code，The directory structure is the same as filter2d_8k
 │   └── filter2d_1280x720_basic      1280x720 filter2d source code，The directory structure is the same as filter2d_8k
 ├── notebook
