@@ -35,7 +35,7 @@
 
 1. AIE仿真
 
-考虑到仿真效率和时间，可以使用仓库`project`文件夹下提交的`filter2d_64x64_basic`工程执行AIE仿真。
+考虑到仿真效率和时间，可以使用仓库`project`文件夹下提交的`filter2d_64x64_basic`工程即可执行AIE仿真。
 拷贝aie文件夹中的src和data分到vitis中执行编译和仿真。
 
 2. 硬件运行
