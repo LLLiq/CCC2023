@@ -44,11 +44,10 @@
 
 ```shell
 # 克隆仓库
-git clone https://github.com/Xtra-Computing/hacc_demo.git
+git clone https://github.com/LLLiq/CCC2023/tree/main
 
-# 获取VCK5000计算节点（根据hacc_demo存放路径修改指令）
-./hacc_demo/env/vck5000_alloc 3
-source ./hacc_demo/env/vck5000_env
+# 编译host端
+cd project/filter2d_8K_advanced
 
 # 在本项目的execution文件夹下运行可执行文件
 ./CCC2023/sources/fft_4k/execution/host.exe
