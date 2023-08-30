@@ -86,13 +86,22 @@ CCC2023
 
 ## Reference
 [1] AMD/Xilinx. Versal ACAP AI Engine Architecture Manual (AM009)
+
 [2] AMD/Xilinx. AI Engine Tools and Flows User Guide (UG1076) 
+
 [3] AMD/Xilinx. AI Engine Intrinsics User Guide
+
 [4] AMD/Xilinx. AI Engine Kernel and Graph Programming Guide (UG1079)
+
 [5] AMD/Xilinx. Vivado Design Suite User Guide High-Level Synthesis (UG902)
+
 [6] AMD/Xilinx. XRT Native Library C++ API
+
 [7] AMD/Xilinx. XRT and Vitis™ Platform Overview
+
 [8] AMD/Xilinx. Vitis Unified Software Platform Documentation: Application Acceleration Development (UG1393)
+
 [9] HACC@NUS. Heterogeneous Accelerated Compute Cluster (HACC) at NUS
+
 [10] Slurm. Slurm workload manager Version23.02
 
