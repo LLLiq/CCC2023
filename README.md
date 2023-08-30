@@ -33,7 +33,7 @@
 
 ## Excution
 
-以本仓库`sources`文件夹下提交的`fft_4k`工程为例，可以执行AIE仿真和硬件运行。
+以本仓库`project`文件夹下提交的`filter2d_64x64_basic`工程为例，可以执行AIE仿真和硬件运行。
 
 1. AIE仿真
 
