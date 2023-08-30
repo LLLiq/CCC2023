@@ -80,8 +80,8 @@ CCC2023
 │   └── filter2d_64x64_basic         64x64 filter2d source code，The directory structure is the same as filter2d_8k
 │   └── filter2d_1280x720_basic      1280x720 filter2d source code，The directory structure is the same as filter2d_8k
 ├── notebook
-│   ├── fft_sw.ipynb
-│   ├── fft_aie.ipynb
+│   ├── image
+│   ├── notebook.md
 └── README.md
 ```
 
