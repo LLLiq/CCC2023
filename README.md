@@ -1,10 +1,10 @@
 # CCFSys 2023 - First Prize - BJUT
 
-> University：北京工业大学 
+> University：北京工业大学(BJUT)
 > 
-> Mentor：张文博老师、包振山老师
+> Mentor：张文博老师(Wenbo Zhang)、包振山老师(Zhenshan Bao)
 > 
-> Team：刘一祺、王天硕、李一鸣
+> Team：刘一祺（Yiqi Liu）、王天硕（Tianshuo Wang）、李一鸣（Yiming Li）
 
 以上信息添加英文备注
 
