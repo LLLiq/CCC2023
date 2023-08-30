@@ -72,8 +72,10 @@ CCC2023
 │   │
 │   └── filter2d_64x64_basic         64x64分辨率filter2d完整代码，目录结构同filter2d_8k_advanced
 │   └── filter2d_1280x720_basic      1280x720分辨率filter2d完整代码，目录结构同filter2d_8k_advanced
-│
-├── README.md
+├── notebook
+│   ├── fft_sw.ipynb
+│   ├── fft_aie.ipynb
+└── README.md
 ```
 
 ## Reference
