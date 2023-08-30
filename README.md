@@ -9,28 +9,28 @@
 
  ## Problem
 
-- Basic  - Vision 3X3 filter2D on 64x64 image
+- Basic  - Perform 3X3 filter2D operation on 64x64 image
 
-    Create the filter2D function with 3x3 kernel on 64x64 image using AIE API or AIE Intrinsic based on personal understanding. 
+    Implement a customized 3x3 kernel size filter2D operation using AIE API or AIE Intrinsic for processing a 64x64 image,based on personal comprehension.
 
     - AIE Emulation succeeded
     - The design report submitted
 
 - Advanced  - Image Signal Processing Pipeline on HD image
 
-    Create high definition image processing pipeline design based on personal understanding. It is encouraged to fully use the Vitis Vision Library.
+    Design and implement the High-Definition(HD) image processing pipeline based on personal comprehension,which is encouraged to leverage the Vitis Vision Library.
 
-    - The system level emulation or the hardware run on VCK5000 succeeded
+    - The system-level emulation or the hardware run on VCK5000 succeeded
     - The design report submitted
       
 ## Performance Analyzer
 
-Filter2d designs in three resolutions were completed during the competition.  In the preliminary stage, the filter2d design with 64x64 resolution and 1280x720 resolution was completed.  In the final stage, the preliminary code was optimized and the filter2d design with 8K resolution was realized.
+During the competition, filter2D designs were completed in three different image resolutions. In the preliminary stage, designs were created for 64x64 resolution and 1280x720 resolution. In the final stage, the preliminary code was optimized, resulting in the implementation of a filter2D design for 8K resolution.
 
 The overall completion of the project is as follows.
 
 - The AIE design, optimization and simulation of 8K resolution int32 filter2d algorithm are completed.
-- AIE, PL, and host are completed, and can run on VCK5000 hardware.
+- AIE, PL, and host are completed, which can run on VCK5000 hardware.
 - It achieves an average running speed of 101.97FPS at 8K resolution of int32 type.
 
 ## Design Report
@@ -47,7 +47,7 @@ Copy src and data from the aie folder to vitis for compilation and simulation.
 
 2. Hardware execution
 
-Hardware execution can be run using filter2d_8K_advanced project hardware submitted in the repository's project folder.
+Hardware execution can be run using filter2d_8K_advanced project hardware which is submitted in the repository's project folder.
 
 In each project directory, there is an 'execution' folder that contains the compiled xclbin file. If you want to run it on the VCK5000, you can execute the following code.
 
@@ -63,7 +63,7 @@ make all
 ./template.exe ../execution/template.xclbin
 ```
 
-After the execution is complete, the output result of the console can verify the output result of the execution and calculate the running time.
+After the execution is completed, the output result of the console can verify the output result of the execution and calculate the running time.
 
 ## Repository tree
 The directory structure of the repository is as follows.
