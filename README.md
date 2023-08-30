@@ -42,10 +42,10 @@
 2. 硬件运行
 
  项目构建： 
- 进入对应的源码文件夹使用以下命令编译：
- 编译最初的的目录默认在项目根目录。
+ 进入对应的源码文件夹使用以下命令编译
+ >注：编译初始目录默认在project目录下。
 ```
-cd filter2D_64x64_image/aie
+cd filter2D_64x64_basic/aie
 make all
 cd ../pl
 make all
