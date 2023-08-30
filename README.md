@@ -33,27 +33,31 @@
 
 ## Excution
 
-以本仓库`project`文件夹下提交的`filter2d_64x64_basic`工程为例，可以执行AIE仿真和硬件运行。
-
 1. AIE仿真
 
-可以拷贝aie文件夹中的src和data部分到vitis中执行编译和仿真。
+考虑到仿真效率和时间，可以使用仓库`project`文件夹下提交的`filter2d_64x64_basic`工程执行AIE仿真。
+拷贝aie文件夹中的src和data分到vitis中执行编译和仿真。
 
 2. 硬件运行
+硬件运行使用仓库`project`文件夹下提交的`filter2d_8K_advanced`工程硬件运行。
+在每个工程目录中都有`execution`文件夹，此文件夹下存放了编译好的xclbin文件，如需在VCK5000上运行，可执行以下代码。
 
- 项目构建： 
- 进入对应的源码文件夹使用以下命令编译
- >注：编译初始目录默认在project目录下。
+```shell
+# 克隆仓库
+git clone https://github.com/Xtra-Computing/hacc_demo.git
+
+# 获取VCK5000计算节点（根据hacc_demo存放路径修改指令）
+./hacc_demo/env/vck5000_alloc 3
+source ./hacc_demo/env/vck5000_env
+
+# 在本项目的execution文件夹下运行可执行文件
+./CCC2023/sources/fft_4k/execution/host.exe
+
+# 退出节点
+./hacc_demo/env/vck5000_exit
 ```
-cd filter2D_64x64_basic/aie
-make all
-cd ../pl
-make all
-cd ../host
-make all
-cd ..
-make all
-```
+
+
 项目运行：
 在完成项目构建后，可以使用如下命令快速开始运行：
 ```
