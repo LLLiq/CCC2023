@@ -61,7 +61,7 @@ make all
 本仓库的主要目录结构如下。
 ```
 CCC2023
-├── sources
+├── project
 │   ├── filter2d_8k_advanced          8K分辨率filter2d完整代码
 │   │   ├── aie
 │   │   ├── execution
@@ -70,8 +70,8 @@ CCC2023
 │   │   ├── pl
 │   │   └── Makefile
 │   │
-│   └── filter2d_64x64_basic         64x64分辨率filter2d完整代码，目录结构同filter2d_8k_advanced
-│   └── filter2d_1280x720_basic      1280x720分辨率filter2d完整代码，目录结构同filter2d_8k_advanced
+│   └── filter2d_64x64_basic         64x64分辨率filter2d完整代码，目录结构同filter2d_8k
+│   └── filter2d_1280x720_basic      1280x720分辨率filter2d完整代码，目录结构同filter2d_8k
 ├── notebook
 │   ├── fft_sw.ipynb
 │   ├── fft_aie.ipynb
