@@ -6,7 +6,6 @@
 > 
 > Team：刘一祺（Yiqi Liu）、王天硕（Tianshuo Wang）、李一鸣（Yiming Li）
 
-以上信息添加英文备注
 
  ## Problem
 
