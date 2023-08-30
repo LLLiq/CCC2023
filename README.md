@@ -62,19 +62,18 @@ make all
 ```
 CCC2023
 ├── sources
-│   ├── filter2d_8k_advanced          4K-point FFT完整代码
+│   ├── filter2d_8k_advanced          8K分辨率filter2d完整代码
 │   │   ├── aie
 │   │   ├── execution
 │   │   ├── host
 │   │   ├── hw_link
-│   │   ├── notebook
 │   │   ├── pl
 │   │   └── Makefile
 │   │
-│   └── fft_8k         8K-point FFT完整代码，目录结构同fft_4k
+│   └── filter2d_64x64_basic         64x64分辨率filter2d完整代码，目录结构同filter2d_8k_advanced
+│   └── filter2d_1280x720_basic      1280x720分辨率filter2d完整代码，目录结构同filter2d_8k_advanced
 │
 ├── README.md
-└── 设计报告.pdf
 ```
 
 ## Reference
