@@ -25,50 +25,52 @@
       
 ## Performance Analyzer
 
-比赛期间完成了三种分辨率图像的filter2d设计。在初赛阶段完成了64x64分辨率以及1280x720分辨率的filter2d设计，决赛阶段优化了初赛代码以及实现了8K分辨率的filter2d设计。
+Filter2d designs in three resolutions were completed during the competition.  In the preliminary stage, the filter2d design with 64x64 resolution and 1280x720 resolution was completed.  In the final stage, the preliminary code was optimized and the filter2d design with 8K resolution was realized.
 
-本项目整体完成情况如下。
+The overall completion of the project is as follows.
 
-- 完成了8K分辨率int32类型的filter2d算法的AIE设计、优化和仿真；
-- 完成了AIE、PL、host三端配合，能够在VCK5000硬件上运行。
-- 实现了在int32类型的8K分辨率下平均101.97FPS的运行速度。
+- The AIE design, optimization and simulation of 8K resolution int32 filter2d algorithm are completed.
+- AIE, PL, and host are completed, and can run on VCK5000 hardware.
+- It achieves an average running speed of 101.97FPS at 8K resolution of int32 type.
 
 ## Design Report
 
-- 设计报告：[设计报告](https://github.com/LLLiq/ccc2023_liq/blob/finals/%E5%8C%97%E4%BA%AC%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E6%9E%81%E5%85%89%E9%98%9F%E6%8A%80%E6%9C%AF%E6%8A%A5%E5%91%8A_%E5%86%B3%E8%B5%9B.pdf)
+- Design report：[Design report告](https://github.com/LLLiq/ccc2023_liq/blob/finals/%E5%8C%97%E4%BA%AC%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E6%9E%81%E5%85%89%E9%98%9F%E6%8A%80%E6%9C%AF%E6%8A%A5%E5%91%8A_%E5%86%B3%E8%B5%9B.pdf)
 
 ## Excution
 
-1. AIE仿真
+1. AIE simulation
 
-考虑到仿真效率和时间，可以使用仓库`project`文件夹下提交的`filter2d_64x64_basic`工程即可执行AIE仿真。
-拷贝aie文件夹中的src和data分到vitis中执行编译和仿真。
+Considering the simulation efficiency and time, AIE simulation can be performed using the filter2d_64x64_basic project submitted in the repository 'project' folder.
 
-2. 硬件运行
+Copy src and data from the aie folder to vitis for compilation and simulation.
 
-硬件运行使用仓库`project`文件夹下提交的`filter2d_8K_advanced`工程硬件运行。
-在每个工程目录中都有`execution`文件夹，此文件夹下存放了编译好的xclbin文件，如需在VCK5000上运行，可执行以下代码。
+2. Hardware execution
+
+Hardware execution can be run using filter2d_8K_advanced project hardware submitted in the repository's project folder.
+
+In each project directory, there is an 'execution' folder that contains the compiled xclbin file. If you want to run it on the VCK5000, you can execute the following code.
 
 ```shell
-# 克隆仓库
+# Clone warehouse
 git clone https://github.com/LLLiq/CCC2023/tree/main
 
-# 编译host端
+# Compile host side
 cd project/filter2d_8K_advanced/host
 make all
 
-# 执行
+# execute
 ./template.exe ../execution/template.xclbin
 ```
 
-执行完毕后，控制台输出的结果即可验证本次执行的输出结果以及统计运行时间。
+After the execution is complete, the output result of the console can verify the output result of the execution and calculate the running time.
 
 ## Repository tree
-本仓库的主要目录结构如下。
+The directory structure of the repository is as follows.
 ```
 CCC2023
 ├── project
-│   ├── filter2d_8k_advanced          8K分辨率filter2d完整代码
+│   ├── filter2d_8k_advanced          8K filter2d source code
 │   │   ├── aie
 │   │   ├── execution
 │   │   ├── host
@@ -76,8 +78,8 @@ CCC2023
 │   │   ├── pl
 │   │   └── Makefile
 │   │
-│   └── filter2d_64x64_basic         64x64分辨率filter2d完整代码，目录结构同filter2d_8k
-│   └── filter2d_1280x720_basic      1280x720分辨率filter2d完整代码，目录结构同filter2d_8k
+│   └── filter2d_64x64_basic         64x64 filter2d source code，The directory structure is the same as filter2d_8k
+│   └── filter2d_1280x720_basic      1280x720 filter2d source code，The directory structure is the same as filter2d_8k
 ├── notebook
 │   ├── fft_sw.ipynb
 │   ├── fft_aie.ipynb
