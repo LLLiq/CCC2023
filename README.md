@@ -47,21 +47,11 @@
 git clone https://github.com/LLLiq/CCC2023/tree/main
 
 # 编译host端
-cd project/filter2d_8K_advanced
+cd project/filter2d_8K_advanced/host
+make all
 
-# 在本项目的execution文件夹下运行可执行文件
-./CCC2023/sources/fft_4k/execution/host.exe
-
-# 退出节点
-./hacc_demo/env/vck5000_exit
-```
-
-
-项目运行：
-在完成项目构建后，可以使用如下命令快速开始运行：
-```
-cd host
-./template.exe ../build.xilinx_vck5000_gen4x8_qdma_2_202220_1.hw/template.xclbin
+# 执行
+./template.exe ../execution/template.xclbin
 ```
 
 执行完毕后，控制台输出的结果即可验证本次执行的输出结果以及统计运行时间。
