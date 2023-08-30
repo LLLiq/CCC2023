@@ -32,7 +32,7 @@
 
 - By implementing these optimization methods, we aim to achieve higher performance and efficiency in the implementation of the Filter2D function on the VCK5000 platform.
 
-![图片](/image/1.png)
+![图片](./image/1.png)
 
 ## System architecture
 The AIE part is the core of our design, and the whole system architecture is shown in the image.
@@ -45,14 +45,14 @@ On the PS side, we utilized XRT (Xilinx Runtime) for runtime control of the syst
 
 This architecture allowed us to achieve efficient and parallel computation for the convolution operations, contributing to the overall performance of our system.
 
-![图片](/image/2.png)
+![图片](./image/2.png)
 
 ## AI-Engine (AIE) design
 ###AIE::Vector
 
 The key computational logic of the AIE is utilizing the vector processor to perform 8-way Int32 parallel operations.
 
-![图片](/image/3.png)
+![图片](./image/3.png)
 
 In this image, a 3x10 input image is divided into 9 vectors, each containing 8 Int32 elements, as indicated by the boxes of different frame color. 
 
@@ -64,7 +64,7 @@ During the multiplication process, the ACC (accumulator) is used for result accu
 
 After vectorizing the convolution computation, we can design the corresponding AIE kernels. To achieve efficient computation, we split the convolution calculation into two parts. The K0 kernel is responsible for two-thirds of the convolution workload, while the K1 compute core handles one-third of the workload. The ACC is cascaded between them, and the overall processing is performed in a well-designed pipelined manner.
 
-![图片](/image/4.png)
+![图片](./image/4.png)
 
 Since the two compute cores have different data requirements after the split, we add a distribute kernel to pass the data needed by the two compute kernels. We named this entire unit as a processing unit, which was able to conduct all convolution operations. However, to improve speed, we can split the image into multiple parts and run multiple processing units simultaneously.
 
@@ -72,7 +72,7 @@ Since the two compute cores have different data requirements after the split, we
 
 Once we have a singe processing unit and confirm the image segmentation, we can scale the process units. In our current design, to tackle the challenge of final round, we used 18 processing units.
 
-![图片](/image/5.png)
+![图片](./image/5.png)
 
 Increasing the number of image blocks during partitioning will result in more processing units and shorter computation time. However, it is important to consider the hardware resource limitations, as a larger number of processing units will require more AIE cores.
 
@@ -82,13 +82,13 @@ When determining the optimal number of processing units, it is crucial to strike
 
 Once the AIE design is completed, we turn to the design of the PL. The PL kernels can be divided into two groups----those that interact with the AIE and those that do not. Let's start by discussing the PL cores that interact with the AIE which are PL_SEND and PL_RECEIVE.
 
-![图片](/image/6.png)
+![图片](./image/6.png)
 
 PL_SEND takes the main role of transferring data to the AIE processing units, providing a one-to-one service for each AIE processing unit. On the other hand, PL_RECEIVE is responsible for receiving data from the AIE, providing a one-to-two service for each PL_RECEIVE core, capable of receiving data from two AIE processing units.
 
 Another type of PL core that interacts with the AIE is the JPEG image decoding core based on the Vitis library. This core requires reading the binary data of the input image from the PS side and, after calling this kernel, extracting the Y channel as the input image.
 
-![图片](/image/7.png)
+![图片](./image/7.png)
 
 ## Host (PS) design
 
@@ -96,7 +96,7 @@ Once the PL design is completed, the PS side can be used for flow control. The P
 
 One of the more complex function of the PS design is image reshaping. Since the output data from PL_RECEIVE is interleaved, it needs to be reshaped into sequential order to be used as the output result.
 
-![图片](/image/8.png)
+![图片](./image/8.png)
 
 ## Performance Analyzer
 
@@ -104,4 +104,4 @@ By applying development process just mentioned, we have achieved impressive resu
 
 The two images on the right-hand side show the input image and the processed image. The input image is based on the "sand" image from the VCK5000 official example, and we have used tools to upscale its resolution to 8K.
 
-![图片](/image/9.png)
+![图片](./image/9.png)
