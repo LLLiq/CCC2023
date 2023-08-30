@@ -106,3 +106,5 @@ CCC2023
 
 [10] Slurm. Slurm workload manager Version23.02
 
+[11]	ZHANG W, WANG T, LIU Y, et al. New Filter2D Accelerator on the Versal Platform Powered by the AI Engine [Z]. The 15th CCF International Symposium on Advanced Parallel Processing Technology(APPT). NANCHANG, CN. 2023
+
