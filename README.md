@@ -39,6 +39,7 @@
 拷贝aie文件夹中的src和data分到vitis中执行编译和仿真。
 
 2. 硬件运行
+
 硬件运行使用仓库`project`文件夹下提交的`filter2d_8K_advanced`工程硬件运行。
 在每个工程目录中都有`execution`文件夹，此文件夹下存放了编译好的xclbin文件，如需在VCK5000上运行，可执行以下代码。
 
