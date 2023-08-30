@@ -61,7 +61,7 @@ cd host
 ./template.exe ../build.xilinx_vck5000_gen4x8_qdma_2_202220_1.hw/template.xclbin
 ```
 
-执行完毕后，可使用`sources/fft_4k/notebook`文件夹下的`.ipynb`文件可视化输出结果并进行验证。
+执行完毕后，控制台输出的结果即可验证本次执行的输出结果以及统计运行时间。
 
 ## Repository tree
 本仓库的主要目录结构如下。
