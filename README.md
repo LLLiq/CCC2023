@@ -68,7 +68,7 @@ cd host
 ```
 CCC2023
 ├── sources
-│   ├── fft_4k          4K-point FFT完整代码
+│   ├── filter2d_8k_advanced          4K-point FFT完整代码
 │   │   ├── aie
 │   │   ├── execution
 │   │   ├── host
